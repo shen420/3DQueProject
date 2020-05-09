@@ -11,12 +11,12 @@ public class ServiceController {
 
     Logger logger = LoggerFactory.getLogger(ServiceController.class);
 
+    //prints reversed string if a valid parameter is given
     @GetMapping("/reverse/{targetString}")
     public String reverse(@PathVariable(value = "targetString") String target) {
 
         logger.info("string to reverse:" + target);
 
-        // print reversed String
         return new StringBuilder(target).reverse().toString();
     }
 }

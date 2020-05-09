@@ -6,12 +6,14 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+// Spring MockMvc handles the incoming HTTP request and sends it to controller
+// so that the code is called in exactly the same way as if it were processing a real HTTP request
+// but without starting the server
 @SpringBootTest
 @AutoConfigureMockMvc
 public class ServiceControllerTest {

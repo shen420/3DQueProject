@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ErrorHandlerController implements ErrorController {
     private final static String ERROR_PATH = "/error";
 
-    // print reversed String
+    //prints error message if the URL path is invalid
     @GetMapping(ERROR_PATH)
     public String error() {
         return "Enter valid URL";
